@@ -10,4 +10,5 @@ monthly calendar
 * export FLASK_ENV=development
 * flask run
 
-![calendar](calendar.png)
+
+<img src='calendar.png', width=500>
