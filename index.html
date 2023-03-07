@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Flask App</title>
+
+<style>
+    .calendar {
+        margin-left: 100px; /* set left margin to 100 pixels */
+        table-layout: fixed; /* fix table layout */
+        width: 100%; /* make table fill its container */
+    }
+    .calendar th {
+        text-align: right; /* align weekday labels to the right */
+        width: 1.2cm; /* set width of each column to 1.2cm */
+    }
+    .calendar td {
+        text-align: right;
+        width: 1.2cm; /* set width of each column to 1.2cm */
+    }
+</style>
+
+
+
+
+
+</head>
+
+<body>
+    <form action="/" method="post">
+        <label for="year">Enter Year, Month:</label><br>
+        <input type="text" id="year" name="year"><br>
+        <input type="text" id="month" name="month"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+    {% if html_cal %}
+    <div class="calendar">{{ html_cal|safe }}</div>
+    {% endif %}
+
+</body>
+
+</html>
